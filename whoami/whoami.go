@@ -10,11 +10,9 @@ import (
 //2022
 
 func main() {
-	//get args
-	args := os.Args[1]
-	if args == "--help" { //check for help
-		fmt.Println("Prints the current username")
-		os.Exit(0)
+	//check for help message
+	if len(os.Args) >= 2 && os.Args[1] == "--help" {
+		fmt.Println("Print current user")
 	}
 
 	//get user
